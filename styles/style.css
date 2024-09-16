@@ -1,0 +1,256 @@
+/* Global style */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 18px;
+}
+:root{
+    --main-color:#1C1E53; 
+    --weight-white:#BBBBCB;
+    --p-color:#282938;
+}
+a{text-decoration: none;}
+img{width: 100%;}
+.container{
+    margin: auto;
+    width: 95%;
+}
+/* End Global style */
+/* Start Navbar */
+body{
+    position: relative;
+}
+.arrow{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 999;  
+}
+.arrow a{
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: white;
+}
+nav{
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 20px 0;
+    z-index: 999;
+
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+}
+nav .container .logo a{
+    font-size: 28px;
+    font-weight: bolder;
+    color:white; 
+}
+nav .links{
+    display: flex;
+     align-items: center;
+}
+nav .links .links-info{
+    display: flex;
+    align-items: center;
+}
+nav .links .links-info a{
+    color: var(--weight-white);
+    margin-right: 40px;
+    padding: 8px 0;
+    position: relative;
+}
+nav .links .links-info a::before{
+content: "";
+position: absolute;
+height: 1px;
+width:0;
+background-color: #FCD980;
+bottom: 0;
+left: 0;
+right: 0;
+transition: 0.6s;
+}
+nav .links .links-info a:hover::before{
+    width: 100%;
+}
+nav .links .links-info  a:first-child {
+    color: white;
+}
+.links .contact a{
+    background-color: inherit;
+    border: 1px solid var(--weight-white);
+    padding: 10px 30px;
+    border-radius: 40px;
+    transition: 0.6s;
+    color: white;
+    font-size: 18px; 
+}
+.links .contact a:hover{
+    background-color: #FCD980;
+    color: #1C1E53;
+}
+
+/* End Navbar */
+
+/* start main */
+header{
+    height: 90vh;
+    background-color:var(--main-color);
+}
+.head-content h1{
+    font-size: 60px;
+}
+.head-content .pages a:first-child{
+    background-color: #FCD980;
+    border: 1px solid var(--weight-white);
+    padding: 12px 40px;
+    border-radius: 40px;
+    transition: 0.6s;
+    font-size: 17px;
+    color: var(--main-color);
+}
+.head-content .pages a:first-child:hover{
+    background-color: inherit;
+    border: 1px solid var(--weight-white);
+    color: white;
+}
+.head-content .pages a:last-child{
+     background-color: inherit;
+     color: white;
+    border: none;
+    margin-left: 25px;
+}
+/* End Header */
+/* Project Section */
+
+.our-projects .row .img-box{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+}
+.our-projects .row .img-box .pro-pho{
+    position: absolute;
+    top:0;
+    left:100%;
+    right: 0;
+    background-color:#1c1e5385 ;
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+    color: white;
+}
+.our-projects .row .img-box:hover .pro-pho{
+    left:0;
+}
+.our-projects .row .img-box:hover .pro-pho1{
+    left:55%;
+}
+.our-projects .row .img-box .pro-pho1{
+    position: absolute;
+    top:0;
+    left:100%;
+    right:0;
+    width: 50%;
+    background-color:#1c1e5385 ;
+    height: 100%;
+    transition: 0.8s;
+    color: white;
+}
+.futures{
+    background-color: #F4F6FC;
+}
+.futures i{
+    color: #2405F2;
+}
+.futures .futures-card h3{
+    font-size: 19px;
+    font-weight: 600;
+}
+.futures .futures-card p{
+    font-size: 14.5px;
+}
+.down-list{
+    display: none;
+}
+.drop-down{
+    transition: 0.8s;
+}
+.drop-down:hover + .down-list{
+    display: block;
+}
+/* ------------------------------ */
+.div-img{
+    color: white;
+    background-image: linear-gradient(rgba(30, 22, 113, 0.291),rgba(31, 23, 118, 0.521)),url(../images/woman-writing-on-paper-3228878.png);
+    background-position: center center;
+    background-size: cover;
+}
+.div-color{
+    background-color: var(--main-color);
+    color: white;
+}
+.div-color form input{
+    background-color: inherit;
+    color: white;
+    border: 0.1px solid #ffffff29;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.div-color form input[type="button"]{
+    background-color: #FCD980;
+    color: var(--main-color);
+}
+.sp{
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+/* ------------------------- */
+.f-sm{
+    font-size: 14.5px;
+}
+footer{
+    background-color: #1C1E53;
+    color: white;
+}
+footer .spdev{
+    background-color: #FCD980;
+    color: #000;
+}
+.links-footer a{
+    color: #000;
+    padding: 0 7px;
+    font-size: 16px;
+}
+/* ----------------- */
+/* contact page */
+/* ----------------- */
+
+label{
+    display: block;
+}
+.Contact-pg .data-inputs input , textarea{
+    border: 0.5px solid #c9c8c8;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.contact-btn{
+    margin-top: 20px;
+    background-color: #282938 ;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+}
